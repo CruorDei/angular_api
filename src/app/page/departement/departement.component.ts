@@ -18,10 +18,11 @@ export class DepartementComponent implements OnInit {
   }
 
   getDepartement(url: string = UrlApi.rawUrl_Departement) {
-    this._httpService.getRequest<any>(url).subscribe((jsonResponse) => {
+    this._httpService.getRequest<Departement[]>(url).subscribe((jsonResponse) => {
       this.arrayDepartement = jsonResponse
       console.log(jsonResponse)
     })
 
   }
 }
+
